@@ -41,7 +41,6 @@ def main():
       piece_width*num_pieces_h, piece_height*num_pieces_v,
       float(piece_width*num_pieces_h) / (piece_height*num_pieces_v)))
 
-  #f = open('/usr/local/google/home/zvika/Downloads/zvika_puzzle.svg', 'w')
   f = open('zvika_puzzle.svg','w')
 
   f.write(HEADER)
