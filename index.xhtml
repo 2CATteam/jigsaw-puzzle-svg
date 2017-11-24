@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>Jigsaw Puzzle SVG Generator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"></link>
+  <script defer="defer" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="jigsaw.css" type="text/css"></link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="jigsaw.js"></script>
+</head>
+
+<body>
+<div class="layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+<main class="mdl-layout__content" style="overflow-x:auto;">
+<div class="container">
+
+<div class="content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell">
+<h4>Jigsaw Puzzle SVG Generator</h4>
+<form action="#">
+<div>
+  <span class="descriptor">Number of pieces:</span>
+  <div class="numeric-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="num-pieces-h" value="9"></input>
+    <label class="mdl-textfield__label" for="sample4">Horizontal</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+  <span class="descriptor"></span>
+  <div class="numeric-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="num-pieces-v" value="6"></input>
+    <label class="mdl-textfield__label" for="sample4">Vertical</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+</div>
+<div>
+  <span class="descriptor">Piece dimensions:</span>
+  <div class="numeric-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="piece-width" value="100"></input>
+    <label class="mdl-textfield__label" for="sample4">Horizontal</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+  <span class="descriptor"></span>
+  <div class="numeric-textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="piece-height" value="80"></input>
+    <label class="mdl-textfield__label" for="sample4">Vertical</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+</div>
+<div>Total: <span id="total-pieces"></span> pieces</div>
+<div>Dimensions: <span id="total-dimensions"></span></div>
+<div>Aspect ratio: <span id="aspect-ratio"></span></div>
+<div class="buttons">
+<button id="button-generate" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  Generate
+</button>
+<span class="descriptor"></span>
+<button id="button-download" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  Download
+</button>
+</div>
+</form>
+</div>
+
+<div id="output-div" style="display:none;" class="content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell">
+  <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+</div>
+
+</div>
+</main>
+</div>
+</body>
+
+</html>
